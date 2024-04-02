@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sio.devoir2sio1b.Devoir2Controller">
+   <children>
+      <HBox prefHeight="75.0" prefWidth="600.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="79.0" prefWidth="600.0" style="-fx-background-color: purple;" text="Gestion de portefeuille" textFill="WHITE">
+               <font>
+                  <Font name="Monotype Corsiva" size="44.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label layoutX="14.0" layoutY="88.0" text="Liste des traders" />
+      <Label layoutX="257.0" layoutY="88.0" text="Liste des actions" />
+      <TableView fx:id="tvTraders" layoutX="14.0" layoutY="111.0" onMouseClicked="#tvTradersClicked" prefHeight="120.0" prefWidth="175.0">
+        <columns>
+          <TableColumn fx:id="tcNumeroTrader" prefWidth="65.33331298828125" text="Numéro" />
+          <TableColumn fx:id="tcNomTrader" prefWidth="89.99996948242188" text="Nom" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tvActions" layoutX="257.0" layoutY="111.0" onMouseClicked="#tvActionsClicked" prefHeight="120.0" prefWidth="336.0">
+        <columns>
+          <TableColumn fx:id="tcNumeroAction" prefWidth="63.3333740234375" text="Numéro" />
+          <TableColumn fx:id="tcNomAction" prefWidth="69.3333740234375" text="Nom" />
+            <TableColumn fx:id="tcMontantAchatAction" prefWidth="108.0" text="Montant achat" />
+            <TableColumn fx:id="tcQuantiteAction" prefWidth="74.6666259765625" text="Quantité" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="246.0" prefHeight="17.0" prefWidth="175.0" text="Montant total du portefeuille">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMontantTotalPortefeuille" alignment="CENTER" editable="false" layoutX="14.0" layoutY="283.0" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="257.0" layoutY="246.0" text="Nom" />
+      <Label layoutX="397.0" layoutY="246.0" text="Quantité" />
+      <TextField fx:id="txtNomAction" alignment="CENTER" editable="false" layoutX="300.0" layoutY="242.0" prefHeight="25.0" prefWidth="74.0" />
+      <TextField fx:id="txtQuantiteAction" alignment="CENTER" layoutX="465.0" layoutY="242.0" prefHeight="25.0" prefWidth="74.0" />
+      <Button fx:id="btnVendre" layoutX="258.0" layoutY="283.0" mnemonicParsing="false" onMouseClicked="#btnVendreClicked" prefHeight="25.0" prefWidth="336.0" text="Vendre" />
+   </children>
+</AnchorPane>
